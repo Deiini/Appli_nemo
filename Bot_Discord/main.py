@@ -14,7 +14,6 @@ async def on_ready():
     await general_channel.send(f"Bonjour, Je suis opérationnel !")
 
 #Envoi dans un canal la réponse
-@client.event
 async def ping(message):
     general_channel = client.get_channel(834118319257681950)
     if message.content =="Ping":
@@ -23,7 +22,7 @@ async def ping(message):
 
 
 #Commande Spam de génération de lignes
-@client.event
+
 async def spam(message):
        if message.content.startswith("!spam"):
             number = int(message.content.split()[0])
@@ -34,7 +33,6 @@ async def spam(message):
     
 #fonction de suppression de message
 
-@client.event
 async def delete(message):
     if message.content.startswith("!del"):
         number = int(message.content.split()[1])
@@ -55,8 +53,8 @@ async def delete(message):
 async def bonjour(message):
     #general_channel = client.get.channel(834118319257681950)
     if message.content =="!pseudo":
-        message.channel.send("ton pseudo est " + GetCurrentUser)
-        return;
+        message.channel.send("ton pseudo est ")
+        
   
 
 client.run("ODA2MTgxOTg0Nzk1MzYxMzIz.YBltew.i1Kbckt8MWBVHTWx0GDvQmJRdXg")
