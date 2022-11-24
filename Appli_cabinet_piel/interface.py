@@ -16,18 +16,18 @@ class App(tkinter.Tk):
         # self.tk.eval("""
         # set base_theme_dir F:/projet/statElo/awthemes-10.4.0
 
-        # package ifneeded awthemes 10.4.0 \
+        # package if needed awthemes 10.4.0 \
         #     [list source [file join $base_theme_dir awthemes.tcl]]
-        # package ifneeded colorutils 4.8 \
+        # package if needed colorutils 4.8 \
         #     [list source [file join $base_theme_dir colorutils.tcl]]
-        # package ifneeded awdark 7.12 \
+        # package if needed awdark 7.12 \
         #     [list source [file join $base_theme_dir awdark.tcl]]
-        # package ifneeded awbreezedark 1.0.1 \
+        # package if needed awbreezedark 1.0.1 \
         #     [list source [file join $base_theme_dir awbreezedark.tcl]]
-        # package ifneeded awlight 7.6 \
+        # package if needed awlight 7.6 \
         #     [list source [file join $base_theme_dir awlight.tcl]]
         # """)
-        # self.tk.call("lappend", "auto_path", 'F:/projet/statElo/awthemes-10.4.0')
+        # self.tk.call("append", "auto_path", 'F:/projet/statElo/awthemes-10.4.0')
         # self.tk.call("package", "require", 'awdark')
         # self.tk.call("package", "require", 'awlight')
         # self.tk.call("package", "require", 'awbreezedark')
@@ -41,7 +41,7 @@ class App(tkinter.Tk):
             # Dated de naissance
             # Propriétaire ou locataire
             # Trésorerie
-            # Montant du pret
+            # Montant du prêt
             # Honoraire
             # Pourcentage : calculer par l'appli
             # Département
@@ -71,13 +71,13 @@ class App(tkinter.Tk):
         valNom = Entry(nom)
         nom.add(valNom)
 
-        # Paned de Prenom
-        prenom = PanedWindow(saisie, orient=HORIZONTAL)
-        prenom.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
-        saisie.add(prenom)
-        prenom.add(ttk.Label(prenom, text="Prénom :", width=self.tailleLabel))
-        valPrenom = ttk.Entry(prenom)
-        prenom.add(valPrenom)
+        # Paned de Prénom
+        prénom = PanedWindow(saisie, orient=HORIZONTAL)
+        prénom.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
+        saisie.add(prénom)
+        prénom.add(ttk.Label(prénom, text="Prénom :", width=self.tailleLabel))
+        valPrenom = ttk.Entry(prénom)
+        prénom.add(valPrenom)
 
         # Paned Date de naissance
         naissance = PanedWindow(saisie, orient=HORIZONTAL)
@@ -97,20 +97,20 @@ class App(tkinter.Tk):
         habitation.add(valHabitation)
 
         # Paned de Trésorerie
-        tresorerie = PanedWindow(saisie, orient=HORIZONTAL)
-        tresorerie.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
-        saisie.add(tresorerie)
-        tresorerie.add(ttk.Label(tresorerie, text="Trésorerie :",width=self.tailleLabel))
-        valTresorerie = ttk.Entry(tresorerie)
-        tresorerie.add(valTresorerie)
+        trésorerie = PanedWindow(saisie, orient=HORIZONTAL)
+        trésorerie.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
+        saisie.add(trésorerie)
+        trésorerie.add(ttk.Label(trésorerie, text="Trésorerie :",width=self.tailleLabel))
+        valTresorerie = ttk.Entry(trésorerie)
+        trésorerie.add(valTresorerie)
 
-        # Paned de pret
-        pret = PanedWindow(saisie, orient=HORIZONTAL)
-        pret.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
-        saisie.add(pret)
-        pret.add(ttk.Label(pret, text="Prêt :",width=self.tailleLabel))
-        valPret = ttk.Entry(pret)
-        pret.add(valPret)
+        # Paned de prêt
+        prêt = PanedWindow(saisie, orient=HORIZONTAL)
+        prêt.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
+        saisie.add(prêt)
+        prêt.add(ttk.Label(prêt, text="Prêt :",width=self.tailleLabel))
+        valPret = ttk.Entry(prêt)
+        prêt.add(valPret)
 
         # Paned de honoraire
         honoraire = PanedWindow(saisie, orient=HORIZONTAL)
@@ -128,23 +128,23 @@ class App(tkinter.Tk):
         valPourcentage = ""
         pourcentage.add(ttk.Label(pourcentage, text=valPourcentage))
 
-        # Paned departement
-        departement = PanedWindow(saisie, orient=HORIZONTAL)
-        departement.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
-        saisie.add(departement)
-        departement.add(ttk.Label(departement, text="Departement :",width=self.tailleLabel))
+        # Paned département
+        département = PanedWindow(saisie, orient=HORIZONTAL)
+        département.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
+        saisie.add(département)
+        département.add(ttk.Label(département, text="Departement :",width=self.tailleLabel))
         listeDepartement = [14,50,61]
-        valDepartement = ttk.Combobox(departement, values=listeDepartement)
-        departement.add(valDepartement)
+        valDepartement = ttk.Combobox(département, values=listeDepartement)
+        département.add(valDepartement)
 
-        # Paned enseigne
-        enseigne = PanedWindow(saisie, orient=HORIZONTAL)
-        enseigne.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
-        saisie.add(enseigne)
-        enseigne.add(ttk.Label(enseigne, text="Enseigne :", width=self.tailleLabel))
-        listeEnseigne = ["CA","CIC","Autre"]
-        valEnseigne = ttk.Combobox(enseigne, values=listeEnseigne)
-        enseigne.add(valEnseigne)
+        # Paned apporteur
+        apporteur = PanedWindow(saisie, orient=HORIZONTAL)
+        apporteur.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
+        saisie.add(apporteur)
+        apporteur.add(ttk.Label(apporteur, text="Apporteur :", width=self.tailleLabel))
+        listeapporteur = ["CA","CIC","Autre"]
+        valApporteur = ttk.Combobox(apporteur, values=listeapporteur)
+        apporteur.add(valApporteur)
 
         # Paned de lieux
         lieux = PanedWindow(saisie, orient=HORIZONTAL)
@@ -158,7 +158,7 @@ class App(tkinter.Tk):
         financement = PanedWindow(saisie, orient=HORIZONTAL)
         financement.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
         saisie.add(financement)
-        financement.add(ttk.Label(financement, text="Statue du Financement :",width=self.tailleLabel))
+        financement.add(ttk.Label(financement, text="Statut du Financement :",width=self.tailleLabel))
         listeFinancement = ["Financé", "Non financé"]
         valFinancement = ttk.Combobox(financement, values=listeFinancement)
         financement.add(valFinancement)
