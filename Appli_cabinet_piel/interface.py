@@ -72,12 +72,12 @@ class App(tkinter.Tk):
         nom.add(valNom)
 
         # Paned de Prénom
-        prénom = PanedWindow(saisie, orient=HORIZONTAL)
-        prénom.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
-        saisie.add(prénom)
-        prénom.add(ttk.Label(prénom, text="Prénom :", width=self.tailleLabel))
-        valPrenom = ttk.Entry(prénom)
-        prénom.add(valPrenom)
+        prenom = PanedWindow(saisie, orient=HORIZONTAL)
+        prenom.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
+        saisie.add(prenom)
+        prenom.add(ttk.Label(prenom, text="Prénom :", width=self.tailleLabel))
+        valPrenom = ttk.Entry(prenom)
+        prenom.add(valPrenom)
 
         # Paned Date de naissance
         naissance = PanedWindow(saisie, orient=HORIZONTAL)
@@ -97,20 +97,20 @@ class App(tkinter.Tk):
         habitation.add(valHabitation)
 
         # Paned de Trésorerie
-        trésorerie = PanedWindow(saisie, orient=HORIZONTAL)
-        trésorerie.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
-        saisie.add(trésorerie)
-        trésorerie.add(ttk.Label(trésorerie, text="Trésorerie :",width=self.tailleLabel))
-        valTresorerie = ttk.Entry(trésorerie)
-        trésorerie.add(valTresorerie)
+        tresorerie = PanedWindow(saisie, orient=HORIZONTAL)
+        tresorerie.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
+        saisie.add(tresorerie)
+        tresorerie.add(ttk.Label(tresorerie, text="Trésorerie :",width=self.tailleLabel))
+        valTresorerie = ttk.Entry(tresorerie)
+        tresorerie.add(valTresorerie)
 
         # Paned de prêt
-        prêt = PanedWindow(saisie, orient=HORIZONTAL)
-        prêt.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
-        saisie.add(prêt)
-        prêt.add(ttk.Label(prêt, text="Prêt :",width=self.tailleLabel))
-        valPret = ttk.Entry(prêt)
-        prêt.add(valPret)
+        pret = PanedWindow(saisie, orient=HORIZONTAL)
+        pret.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
+        saisie.add(pret)
+        pret.add(ttk.Label(pret, text="Prêt :",width=self.tailleLabel))
+        valPret = ttk.Entry(pret)
+        pret.add(valPret)
 
         # Paned de honoraire
         honoraire = PanedWindow(saisie, orient=HORIZONTAL)
@@ -129,13 +129,13 @@ class App(tkinter.Tk):
         pourcentage.add(ttk.Label(pourcentage, text=valPourcentage))
 
         # Paned département
-        département = PanedWindow(saisie, orient=HORIZONTAL)
-        département.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
-        saisie.add(département)
-        département.add(ttk.Label(département, text="Departement :",width=self.tailleLabel))
+        departement = PanedWindow(saisie, orient=HORIZONTAL)
+        departement.pack(side=TOP, expand=Y, fill=BOTH,pady=2,padx=2)
+        saisie.add(departement)
+        departement.add(ttk.Label(departement, text="Departement :",width=self.tailleLabel))
         listeDepartement = [14,50,61]
-        valDepartement = ttk.Combobox(département, values=listeDepartement)
-        département.add(valDepartement)
+        valDepartement = ttk.Combobox(departement, values=listeDepartement)
+        departement.add(valDepartement)
 
         # Paned apporteur
         apporteur = PanedWindow(saisie, orient=HORIZONTAL)
