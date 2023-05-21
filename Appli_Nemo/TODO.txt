@@ -1,19 +1,19 @@
-----Application calcul des couts de revient------
-    ----Interface Achat------
-        --- Création de la base de données OK
-        --- Entrée Matières premières (environ une 30 aine de matières) OK
-        --- Prix OK
-        --- Quantité OK
-        --- Prix total OK
-        --- Récupération des données dans la base de données OK
-        --- Afficher le retour dans le tableau OK
-        --- associer les entrées d'une commande à un index NOK
-        --- Ajouter un bouton de suppression d'une  ou plusieurs lignes   NOK
-
-    ----Interface Ventes------
-        --- Taux horaires 10/12 €/H
-        --- Entrée des ventes
-        --- calcul des couts de revient
-        --- calcul des marges
-        --- calcul des prix de vente estimés
+# ----Application calcul des couts de revient------
+#     ----Interface Achat------
+#         --- Création de la base de données OK
+#         --- Entrée Matières premières (environ une 30 aine de matières) OK
+#         --- Prix OK
+#         --- Quantité OK
+#         --- Prix total OK
+#         --- Récupération des données dans la base de données OK
+#         --- Afficher le retour dans le tableau OK
+#         --- associer les entrées d'une commande à un index NOK
+#         --- Ajouter un bouton de suppression d'une  ou plusieurs lignes   NOK
+#
+#     ----Interface Ventes------
+#         --- Taux horaires 10/12 €/H
+#         --- Entrée des ventes
+#         --- calcul des couts de revient
+#         --- calcul des marges
+#         --- calcul des prix de vente estimés
 
